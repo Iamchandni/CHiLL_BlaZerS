@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=" https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <style>
+        body{
+          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
+    </style>
+    <div style="display:flex;flex-direction:row;border-radius: 2px;" id="id1">
+        <img src="https://media.istockphoto.com/vectors/money-monochrome-vintage-seamless-pattern-vector-id1350842310?k=20&m=1350842310&s=612x612&w=0&h=-4jLhLb4DpLFEIEhrWXU59W1jtUuftgwKisWbOkT5Gc=" style="width:50%;display:block;" id="img"/>
+        <script>
+            img=document.getElementById('img')
+            if(window.innerWidth<900){
+               img.style.display='none'
+            }else{
+                img.style.display='block'
+            }
+        </script>
+        <form action="/skill" method="post" class="flex flex-col" style=" height:100%;padding-top:80px;padding-left:calc(100%/8)">
+            <div style="display:flex;justify-content:start;margin-bottom: 10px;column-gap: 10px;" class="text-2xl ">
+                <p>Step</p>
+                <p style="color:blueviolet"><strong>2</strong></p>
+            </div>
+            <p class="text-3xl text-black mb-2">Skills:</p>
+            <% skilllist.forEach(skill){ %>
+        <li style="display: flex;"><input type="checkbox" name="checkbox" value="<%=skill._id%>"  onChange="this.form.submit()">
+        <p> <%= skill }%></p> 
+       <input type="text" name="'skills" class="border-slate=500  border-4" style="width:250px"></li>
+       <li>
+       <div style="display:flex;justify-content:start;column-gap:120px" >
+        <button type="submit" name="skills" class="bg-red-300 hover:bg-red-600 rounded-lg "style="padding:10px;">Add more Skills</button></form>
+        <a href="/dashboard">
+        <button  class="bg-cyan-300 hover:bg-cyan-600 rounded-lg" style="padding:10px;">Submit</button></a></div></li>
+    </div>
+</body>
+</html>

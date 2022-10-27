@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=" https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <style>
+        body{
+          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
+    </style>
+    <div style="display:flex;flex-direction:row;border-radius: 2px;" id="id1">
+    <img src="https://media.istockphoto.com/vectors/seamless-vector-pattern-vector-id1024579518?k=20&m=1024579518&s=612x612&w=0&h=UodofiUVtbm9e-GoyFp3P3VS4QX62wQL-T-B1TRLCic=" style="width:50%;display:block;" id="img"/>
+    <script>
+        img=document.getElementById('img')
+        if(window.innerWidth<900){
+           img.style.display='none'
+        }else{
+            img.style.display='block'
+        }
+    </script>
+    <form action="/details" method="post" class="flex flex-col" style=" height:100%;padding-top:80px;padding-left:calc(100%/8)"><ul >
+        <p class="text-3xl text-black mb-2">Tell us more about yourself:</p>
+        <p class="text-lg text-black mb-2">Name:</p>
+    <li><input type="text" name="name" placeholder="name" class="border-slate=500  border-4 mb-3 " style="width:250px"></li>
+    <p class="text-lg text-black mb-2">age:</p>
+    <li><input type="number" name="age" min="0" max="100" class="border-slate=500  border-4 mb-6" style="width:50px" placeholder="age"></li>
+    <p class="text-lg text-black mb-2">Date of birth:</p>
+    <li><input type="date" name="date" placeholder="dd/mm/yyyy" class="border-slate=500  border-4 mb-6" style="width:150px"></li>
+    <p class="text-lg text-black mb-2">Describe yourself:</p>
+    <li><textarea type="text" name="aboutYou" placeholder="about you" class="border-slate=500  border-4 mb-6" style="width:250px;height: 130px;"></textarea></li>
+        <p class="text-lg text-black mb-2">Skills:</p>
+        <% work.skilllist.forEach(skill){ %>
+    <li style="display: flex;"><input type="checkbox" name="checkbox"  onChange="this.form.submit()">
+    <p> <%= skill }%></p> 
+        value="<%=item._id%>
+   <input type="text" name="'skills" class="border-slate=500  border-4" style="width:250px"></li>
+    <li> <div style="display:flex;justify-content:start;column-gap:120px" >
+        <button type="submit" name="details" class="bg-red-300 hover:bg-red-600 rounded-lg "style="padding:10px;margin-top:20px">Submit</button>
+        <button type="submit" id="skill"  name="detailsskill" class="bg-cyan-300 hover:bg-cyan-600 rounded-lg" style="padding:10px;margin-top:20px">Add more Skills</button>
+    </li></ul>
+    </form></div>
+</body>
+</html>
